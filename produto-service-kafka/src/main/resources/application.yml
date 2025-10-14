@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: produto-service-kafka
+
+  datasource:
+    url: jdbc:h2:mem:produto_db;MODE=MySQL;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=false
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      database-platform: org.hibernate.dialect.H2Dialect
+      show-sql: true
+      properties:
+        hibernate:
+          format_sql: true
+
+  kafka:
+    bootstrap-servers: d3n9a46i82eh97tleh50.any.us-east-1.mpx.prd.cloud.redpanda.com:9092
+    properties:
+      security.protocol: SASL_SSL
+      sasl.mechanism: SCRAM-SHA-512
+      sasl.jaas.config: >
+        org.apache.kafka.common.security.scram.ScramLoginModule required
+        username="admin"
+        password="zozLssv32fqsah7osQ4gqaPIhoFdUK";
+
+    consumer:
+      group-id: produto-service-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+server:
+  port: 8082
+
+broker:
+  topic:
+    pedido-criado: pedido.criado
+    estoque-atualizado: estoque.atualizado
