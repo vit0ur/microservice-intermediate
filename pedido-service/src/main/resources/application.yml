@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: pedido-service
+  datasource:
+    url: jdbc:h2:mem:pedido_db;MODE=MySQL;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=false
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  rabbitmq:
+    host: jackal.rmq.cloudamqp.com
+    port: 5671
+    username: sodidwlr
+    password: FTA1ydq61V7bM0mYoyF1aitGhjY0mHN_
+    virtual-host: sodidwlr
+    ssl:
+      enabled: true
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      database-platform: org.hibernate.dialect.H2Dialect
+      show-sql: true
+      properties:
+        hibernate:
+          format_sql: true
+
+server:
+  port: 8081
+
+broker:
+  exchange: pedidos.exchange
+  queue:
+    pedido-criado: pedido.criado
+    estoque-atualizado: estoque.atualizado
+
+    ##url: jdbc:mysql://localhost:3306/pedido_db
+    ##username: root
+    ##password: admin
+    ##driver-class-name: com.mysql.cj.jdbc.Driver
+      ##hibernate.ddl-auto: update
+      ##show-sql: true
+      ##open-in-view: false
+      ##hibernate:
+    ##dialect: org.hibernate.dialect.MySQL8Dialect
+    ##format_sql: true
