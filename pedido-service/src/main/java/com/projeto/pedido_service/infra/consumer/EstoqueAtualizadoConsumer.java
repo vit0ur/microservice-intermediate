@@ -3,6 +3,7 @@ package com.projeto.pedido_service.infra.consumer;
 import com.projeto.pedido_service.application.CriarPedidoService;
 import com.projeto.pedido_service.domain.EstoqueAtualizadoEvent;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,8 +14,13 @@ public class EstoqueAtualizadoConsumer {
         this.service = service;
     }
 
-    @RabbitListener(queues = "${broker.queue.estoque-atualizado}")
-    public void consumir(EstoqueAtualizadoEvent event){
+//    @RabbitListener(queues = "${broker.queue.estoque-atualizado}")
+//    public void consumir(EstoqueAtualizadoEvent event){
+//        service.aplicarResultadoEstoque(event);
+//    }
+
+    @KafkaListener(topics = "${broker.topic.estoque-atualizado}", groupId = "${spring.kafka.consumer.group-id}")
+    public void consumirKafka(EstoqueAtualizadoEvent event) {
         service.aplicarResultadoEstoque(event);
     }
 }

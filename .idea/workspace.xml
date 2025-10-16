@@ -4,21 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d75b16c7-3cf3-4c00-ae86-d4f1aa760dcb" name="Changes" comment="" />
+    <list default="true" id="9da193f8-fe48-4c2f-93b9-abce122bf421" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/pedido-produto-main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pedido-service/src/main/java/com/projeto/pedido_service/infra/adapter/messaging/KafkaPublisherAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/produto-service-kafka/src/main/java/com/projeto/produto_service_kafka/config/KafkaProducerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pedido-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pedido-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pedido-service/src/main/java/com/projeto/pedido_service/application/CriarPedidoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pedido-service/src/main/java/com/projeto/pedido_service/application/CriarPedidoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pedido-service/src/main/java/com/projeto/pedido_service/infra/adapter/messaging/RabbitMQPublisherAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/pedido-service/src/main/java/com/projeto/pedido_service/infra/adapter/messaging/RabbitMQPublisherAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pedido-service/src/main/java/com/projeto/pedido_service/infra/consumer/EstoqueAtualizadoConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/pedido-service/src/main/java/com/projeto/pedido_service/infra/consumer/EstoqueAtualizadoConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pedido-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pedido-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produto-service-kafka/src/main/java/com/projeto/produto_service_kafka/ProdutoServiceKafkaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/produto-service-kafka/src/main/java/com/projeto/produto_service_kafka/ProdutoServiceKafkaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produto-service-kafka/src/main/java/com/projeto/produto_service_kafka/config/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/produto-service-kafka/src/main/java/com/projeto/produto_service_kafka/config/KafkaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produto-service-kafka/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/produto-service-kafka/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="UPDATE_TYPE" value="REBASE" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;vit0ur&quot;
+  }
 }</component>
-  <component name="ProjectId" id="341HefdeJmt6al0lXGq4SC5qQeB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/vit0ur/microservice-intermediate.git&quot;,
+    &quot;accountId&quot;: &quot;6a5b65f4-3beb-4512-bcb9-c9dbcae2344b&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="344NQP6AFvdGeBPSnlMpNMUATrK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,33 +64,23 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.PedidoServiceApplication.executor": "Debug",
     "Application.ProdutoPersistenceServiceApplication.executor": "Run",
-    "Application.ProdutoServiceApplication.executor": "Debug",
-    "JUnit.All in pedido-service.executor": "Run",
+    "Application.ProdutoServiceKafkaApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/josarauj/IdeaProjects/pedido-produto-main/produto-service-kafka",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+    "last_opened_file_path": "C:/Users/josarauj/IdeaProjects/pedido-produto-main"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.projeto.produto_service.config" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d75b16c7-3cf3-4c00-ae86-d4f1aa760dcb" name="Changes" comment="" />
-      <created>1760374255407</created>
+      <changelist id="9da193f8-fe48-4c2f-93b9-abce122bf421" name="Changes" comment="" />
+      <created>1760468868935</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1760374255407</updated>
+      <updated>1760468868935</updated>
     </task>
     <servers />
   </component>

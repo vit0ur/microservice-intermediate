@@ -35,6 +35,7 @@ public class CriarPedidoService {
         evento.setQuantidade(salvo.getQuantidade());
         publisher.publicarPedidoCriado(evento);
 
+
         return salvo;
 
     }

@@ -16,6 +16,12 @@ spring:
     ssl:
       enabled: true
 
+  afka:
+    bootstrap-servers: d3n9a46i82eh97tleh50.any.us-east-1.mpx.prd.cloud.redpanda.com:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
   h2:
     console:
       enabled: true

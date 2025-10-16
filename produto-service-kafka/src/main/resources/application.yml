@@ -16,11 +16,11 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-      database-platform: org.hibernate.dialect.H2Dialect
-      show-sql: true
-      properties:
-        hibernate:
-          format_sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
 
   kafka:
     bootstrap-servers: d3n9a46i82eh97tleh50.any.us-east-1.mpx.prd.cloud.redpanda.com:9092
@@ -30,17 +30,18 @@ spring:
       sasl.jaas.config: >
         org.apache.kafka.common.security.scram.ScramLoginModule required
         username="admin"
-        password="zozLssv32fqsah7osQ4gqaPIhoFdUK";
+        password="6R3Wio3MdDXz0oRiRmpyctH6fi0nNw";
+      spring.json.trusted.packages: com.projeto.produto_service_kafka.domain
 
     consumer:
       group-id: produto-service-group
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
 
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
-      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
 server:
   port: 8082
